@@ -1,37 +1,36 @@
 # 🚀 Java Streams Practice – Intermediate to Advanced 💡
 
 Welcome to my **Java Streams Mastery Repo**!  
-Here, I'm practicing and perfecting my skills with the Java Streams API — from clean transformations to complex grouping, sorting, and filtering.
+This repository contains hands-on practice programs using the Java Streams API to solve real-world style problems efficiently and elegantly.
 
 ---
 
 ## 📚 Topics Covered
 
 ✅ Grouping & Mapping  
+✅ Flattening Nested Structures (`flatMap`)  
 ✅ Sorting keys and values  
 ✅ Filtering within groups  
-✅ Stream flattening (`flatMap`)  
-✅ Working with `Map.Entry`  
+✅ `Map.Entry` transformations  
 ✅ Collectors (`groupingBy`, `mapping`, `joining`, `collectingAndThen`)  
-✅ Real-world stream challenges  
+✅ Character-level stream processing  
 
 ---
 
 ## 💼 Practice Challenges
 
-| #  | Challenge Description                          | Concepts Used                              |
-|----|-----------------------------------------------|---------------------------------------------|
-| 1  | First Non-Repeating Character                 | `chars()`, `filter`, `Collectors.counting`  |
-| 2  | Flatten Words into Characters                 | `flatMap`, `mapToObj`, `split("")`          |
-| 3  | Group Words by First Letter                   | `groupingBy`, `charAt(0)`                   |
-| 4  | Find 2nd Highest Salary (Employees Grouped)   | `groupingBy`, `sorted`, `skip`, `mapping`   |
-| 5  | Sorted Employee Names Grouped by Salary       | `mapping`, `collectingAndThen`, `sorted`    |
-
-> 💡 More challenges added regularly...
+| #  | File                                 | Description                                      | Concepts Used                                   |
+|----|--------------------------------------|--------------------------------------------------|-------------------------------------------------|
+| 1  | `FirstNonRepeatingCharacter.java`    | Finds the first non-repeating character in a string | `chars()`, `groupingBy`, `filter`, `counting()` |
+| 2  | `FlattenWordsToCharacters.java`      | Converts a list of words into a list of characters | `flatMap`, `split("")`, `mapToObj()`            |
+| 3  | `GroupWordsByFirstLetter.java`       | Groups words based on their starting letter        | `groupingBy`, `charAt(0)`                        |
+| 4  | `SecondHighestSalary.java`           | Finds second-highest salary and corresponding employees | `groupingBy`, `mapping`, `sorted`, `skip`    |
+| 5  | `SortedNamesBySalary.java`           | Groups employees by salary with sorted names       | `mapping`, `collectingAndThen`, `sorted()`      |
+| 6  | `AsciiConversionAndFiltering.java`   | Handles ASCII conversion with stream ops           | `IntStream`, `mapToObj`, `chars()`              |
 
 ---
 
-## 🛠️ Sample Code Snippet
+## 🧠 Sample Code Snippet
 
 ```java
 Map<Integer, List<String>> salaryToSortedNames = employeeSalaries.entrySet()
